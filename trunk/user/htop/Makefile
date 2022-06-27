@@ -1,5 +1,5 @@
 SRC_NAME = htop-3.0.2
-SRC_URL = https://bintray.com/htop/source/download_file?file_path=htop-3.0.2.tar.gz
+SRC_URL = https://github.com/hanwckf/rt-n56u/raw/master/trunk/user/htop/htop-3.0.2.tar.gz
 THISDIR = $(shell pwd)
 
 all: download_test extract_test config_test
@@ -12,7 +12,7 @@ download_test:
 
 extract_test:
 	( if [ ! -d $(SRC_NAME) ]; then \
-		tar zxf $(SRC_NAME).tar.gz; \
+		tar -zxf $(SRC_NAME).tar.gz; \
 	fi )
 
 config_test:
